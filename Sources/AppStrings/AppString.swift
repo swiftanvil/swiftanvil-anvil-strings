@@ -18,7 +18,7 @@ public struct AppString: RawRepresentable, ExpressibleByStringLiteral, Hashable,
     }
 
     public init(stringLiteral value: String) {
-        self.rawValue = value
+        rawValue = value
     }
 
     /// Returns the localized string for this key using the main bundle.
@@ -33,5 +33,7 @@ public struct AppString: RawRepresentable, ExpressibleByStringLiteral, Hashable,
 }
 
 extension AppString: CustomStringConvertible {
-    public var description: String { localized }
+    public var description: String {
+        localized
+    }
 }

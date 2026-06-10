@@ -16,5 +16,7 @@ public protocol AppStringCatalog {
 }
 
 public extension AppStringCatalog {
-    static var tableName: String? { nil }
+    static var tableName: String? {
+        nil
+    }
 }

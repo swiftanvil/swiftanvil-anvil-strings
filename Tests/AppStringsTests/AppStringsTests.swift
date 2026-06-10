@@ -76,7 +76,7 @@ struct AppStringBuilderTests {
 struct AppStringCatalogTests {
     @Test("catalog has default table name")
     func defaultTableName() {
-        enum TestCatalog: AppStringCatalog {}
+        enum TestCatalog: AppStringCatalog { }
         #expect(TestCatalog.tableName == nil)
     }
 }

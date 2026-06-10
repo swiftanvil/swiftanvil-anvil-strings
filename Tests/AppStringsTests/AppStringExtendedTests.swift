@@ -148,7 +148,9 @@ struct AppStringCatalogExtendedTests {
     @Test("catalog with custom table name")
     func customTableName() {
         enum CustomCatalog: AppStringCatalog {
-            static var tableName: String? { "CustomStrings" }
+            static var tableName: String? {
+                "CustomStrings"
+            }
         }
         #expect(CustomCatalog.tableName == "CustomStrings")
     }
@@ -156,10 +158,14 @@ struct AppStringCatalogExtendedTests {
     @Test("multiple catalogs have independent table names")
     func independentTableNames() {
         enum CatalogA: AppStringCatalog {
-            static var tableName: String? { "A" }
+            static var tableName: String? {
+                "A"
+            }
         }
         enum CatalogB: AppStringCatalog {
-            static var tableName: String? { "B" }
+            static var tableName: String? {
+                "B"
+            }
         }
         #expect(CatalogA.tableName == "A")
         #expect(CatalogB.tableName == "B")
